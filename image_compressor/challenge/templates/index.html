@@ -1,0 +1,48 @@
+<!DOCTYPE html5>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Image Compressor</title>
+        <link rel="stylesheet" href="/static/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Image Compressor</h1>
+                <p>Compress an image to a zip file.
+            </header>
+
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div>
+                {% for message in messages %}
+                <p>{{message}}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <p>
+                    CHOOSE FILE: <input name="file" type="file">
+                </p>
+                <label>
+                    <input type="checkbox" name="conv" value="l">convert LF to CRR LF
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="comp" value="9">compress better
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="enc" value="P">encrypt
+                </label>
+                <input type="text" name="password" placeholder="Password">
+                <br>
+                <p>
+                    <input type="submit" value="UPLOAD">
+                </p>
+            </form>
+        </div>
+    </body>
+</html>

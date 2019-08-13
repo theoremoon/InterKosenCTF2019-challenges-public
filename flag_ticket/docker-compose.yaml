@@ -1,0 +1,8 @@
+version: '3'
+services:
+  flag_ticket:
+    build: ./
+    restart: always
+    ports:
+      - ${PORT:-8000}:80
+

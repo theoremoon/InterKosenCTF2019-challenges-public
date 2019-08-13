@@ -1,0 +1,7 @@
+version: '3'
+services:
+  uploader:
+    build: .
+    restart: always
+    ports:
+      - ${PORT:-11000}:80

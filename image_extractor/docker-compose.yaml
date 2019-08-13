@@ -1,0 +1,8 @@
+version: '3'
+services:
+  image_extractor:
+    build: ./
+    restart: always
+    ports:
+      - ${PORT:-12000}:4567
+

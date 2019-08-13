@@ -1,0 +1,12 @@
+version: '3'
+services:
+  image_compressor:
+    build:
+      context: .
+    container_name: image_compressor
+    ulimits:
+      nproc: 65535
+      core: 0
+    restart: always
+    ports:
+      - "13001:13001"

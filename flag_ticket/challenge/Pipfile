@@ -1,0 +1,13 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+pycryptodome = "*"
+responder = {git = "https://github.com/kennethreitz/responder",ref = "master"}
+
+[requires]
+python_version = "3.6"

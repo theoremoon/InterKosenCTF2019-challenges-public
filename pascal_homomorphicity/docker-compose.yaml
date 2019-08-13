@@ -1,0 +1,8 @@
+version: '3'
+services:
+  pascal_homomorphicity:
+    build: ./
+    restart: always
+    ports:
+      - ${PORT:-8002}:8888
+

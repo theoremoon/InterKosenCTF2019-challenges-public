@@ -1,0 +1,203 @@
+servers:
+  ?: &pwn_host localhost
+  ?: &crypt_host localhost
+  ?: &web_host localhost
+challenges:
+  "Flag Ticket":
+    tags: [crypto]
+    flag: KosenCTF{padding_orca1e_is_common_sense}
+    description: 'My ticket number for getting the flag is <code>765876346283</code>. Please check if I can get the flag <a href="http://{{host}}:{{port}}/">here</a>.'
+    author: theoldmoon0602
+    base_score: 1000
+    host: *crypt_host
+    port: 8000
+    difficulty: 2
+  favorites:
+    tags: [ reversing ]
+    flag: KosenCTF{Bl00m_1n70_Y0u}
+    description: 'What is your favorite? My favorite is ...'
+    author: theoldmoon0602
+    base_score: 1000
+    difficulty: 3
+  E_S_P:
+    tags: [ crypto ]
+    flag: KosenCTF{H0R1_Yukk0_1s_th3_ESP3r_QUEEN}
+    description: 'ESP stands for Erai-Sugoi-Power.'
+    author: theoldmoon0602
+    base_score: 1000
+    difficulty: 3
+  "fastbin tutorial":
+    tags: [ pwn ]
+    flag: KosenCTF{y0ur_n3xt_g0al_is_t0_und3rst4nd_fastbin_corruption_attack_m4yb3}
+    description: 'Do you understand how malloc/free works?  <pre>nc {{host}} {{port}}</pre>'
+    author: ptr-yudai
+    base_score: 1000
+    host: *pwn_host
+    port: 9001
+    difficulty: 1
+  stegorop:
+    tags: [ pwn ]
+    flag: KosenCTF{r0p_st4g3r_is_piv0t4l}
+    description: 'Hide your secret into a brainf**k code. <pre>nc {{host}} {{port}}</pre>'
+    author: ptr-yudai
+    base_score: 1000
+    host: *pwn_host
+    port: 9002
+    difficulty: 3
+  shopkeeper:
+    tags: [ pwn ]
+    flag: KosenCTF{th4t5_0v3rfl0w_41n7_17?}
+    description: 'What can I help you?  <pre>nc {{host}} {{port}}</pre>'
+    author: ptr-yudai
+    base_score: 1000
+    host: *pwn_host
+    port: 9004
+    difficulty: 1
+  "basic crackme":
+    tags: [ reversing ]
+    flag: KosenCTF{w3lc0m3_t0_y0-k0-s0_r3v3rs1ng}
+    description: 'Crackme is a challenge to get the input which satisfies the constraints.'
+    author: theoldmoon0602
+    base_score: 1000
+    difficulty: 1
+  "bullsh":
+    tags: [ pwn ]
+    flag: KosenCTF{f0rm4t_str1ng_3xpl01t_0n_x64_1s_l4zy}
+    description: "It's tantalizing.  <pre>nc {{host}} {{port}}</pre>"
+    author: ptr-yudai
+    base_score: 1000
+    host: *pwn_host
+    port: 9003
+    difficulty: 2
+  "E-Sequel-Injection":
+    tags: [ web ]
+    flag: "KosenCTF{Smash_the_holy_barrier_and_follow_me_in_the_covenant_of_blood_and_blood}"
+    description: 'Just <a href="http://{{host}}:{{port}}/" target="_blank">login<a>.'
+    author: theoldmoon0602
+    base_score: 1000
+    host: *web_host
+    port: 10000
+    difficulty: 3
+  "Hugtto!":
+    tags: [ forensics ]
+    flag: "KosenCTF{Her_name_is_EMIRU_AISAKI_who_is_appeared_in_Hugtto!PreCure}"
+    description: "Wow! It's random!"
+    author: yoshiking
+    base_score: 1000
+    difficulty: 1
+  "Kurukuru Shuffle":
+    tags: [ crypto ]
+    flag: KosenCTF{us4m1m1_m4sk_s3np41_1s_r34lly_cut3_38769915}
+    description: "Please! My..."
+    author: theoldmoon0602
+    base_score: 1000
+    difficulty: 1
+  "uploader":
+    tags: [ web ]
+    flag: KosenCTF{y0u_sh0u1d_us3_th3_p1ac3h01d3r}
+    description: '<a href="http://{{host}}:{{port}}/" target="_blank">Uploader<a>'
+    author: theoldmoon0602
+    base_score: 1000
+    host: *web_host
+    port: 11000
+    difficulty: 0
+  "Neko Loader":
+    tags: [ web ]
+    flag: KosenCTF{n3v3r_4ll0w_url_1nclud3}
+    description: "The flag is put in somewhere in the root directory of <a href='http://{{host}}:{{port}}/' target='_blank'>nyancat<a> server."
+    author: ptr-yudai
+    base_score: 1000
+    host: *web_host
+    port: 10003
+    difficulty: 2
+  "Image Extractor":
+    tags: [ web ]
+    flag: KosenCTF{sym1ink_causes_arbitrary_fi13_read_0ft3n}
+    description: 'My hated friend releases <a href="http://{{host}}:{{port}}/" target="_blank">a service<a> which extracts images from a document. I want to break it to read <code>/flag</code>.'
+    author: theoldmoon0602
+    base_score: 1000
+    host: *web_host
+    port: 12000
+    difficulty: 1
+  "Image Compressor":
+    tags: [ web, misc ]
+    flag: KosenCTF{4rb1tr4ry_c0d3_3x3cut10n_by_unz1p_c0mm4nd}
+    description: 'My best friend releases <a href="http://{{host}}:{{port}}/" target="_blank">a service<a> which stores an image into a zip file. I want to know his secret written in somewhere in the root directory.'
+    author: ptr-yudai
+    base_score: 1000
+    host: *web_host
+    port: 13001
+    difficulty: 3
+  "saferm":
+    tags: [ forensics, reversing ]
+    flag: KosenCTF{p00r_shr3dd3r}
+    description: 'We found a USB device of the suspect. Unfortunately the document was deleted using a strong tool.'
+    author: ptr-yudai
+    base_score: 1000
+    difficulty: 2
+  "magic function":
+    tags: [ reversing ]
+    flag: KosenCTF{fl4ggy_p0lyn0m}
+    description: |
+      <p>Rumor has it that three simple functions may generate the flag.</p>
+    author: ptr-yudai
+    base_score: 1000
+    difficulty: 1
+  passcode:
+    tags: [ reversing ]
+    flag: KosenCTF{pr3tty_3asy_r3v3rsing_cha11enge}
+    description: "The flag is protected by passcode"
+    author: theoldmoon0602
+    base_score: 1000
+    difficulty: 1
+  "Temple of Time":
+    tags: [ forensics, web ]
+    flag: KosenCTF{t1m3_b4s3d_4tt4ck_v31ls_1t}
+    description: "We released our voting system and it's under attack. Can you investigate if the admin credential is stolen?"
+    author: ptr-yudai
+    base_score: 1000
+    difficulty: 2
+  "kitten":
+    tags: [ pwn ]
+    flag: KosenCTF{00b_4nd_tc4ch3_p01s0n1ng}
+    description: 'Wildlife conservation!  <pre>nc {{host}} {{port}}</pre>'
+    author: ptr-yudai
+    base_score: 1000
+    host: *pwn_host
+    port: 9005
+    difficulty: 4
+  "pascal homomorphicity":
+    tags: [crypto]
+    flag: KosenCTF{Th15_15_t00_we4k_p41ll1er_crypt05y5tem}
+    description: '<pre>nc {{host}} {{port}}</pre>'
+    author: theoldmoon0602, yoshiking
+    base_score: 1000
+    host: *crypt_host
+    port: 8002
+    difficulty: 3
+  "lost world":
+    tags: [forensics]
+    flag: KosenCTF{u_c4n_r3s3t_r00t_p4ssw0rd_1n_VM}
+    description: |
+      <p>Can you restore my root user? I don't remember the password.</p>
+      <p>Try running <code>dmesg | grep KosenCTF</code> after logging in.</p>
+      <a href="https://mega.nz/#!xxMgQAyb!8NxVb2uLE-duIc5OardUdSNh_5j4QbbpxBggjZ0asvE" target="_blank">lost_world.tar.gz</a>
+    author: ptr-yudai
+    base_score: 1000
+    difficulty: 1
+  Survey:
+    tags: [survey]
+    flag: KosenCTF{th4nk_y0u_f0r_pl4y1ng_InterKosenCTF_2019}
+    description: |
+      <p>Please give us your feedback <a href="https://docs.google.com/forms/d/e/1FAIpQLSdvgYHKWRZIDC8vT-aduoo095zFfsm9c5o03K-_7kB9N_xH-w/viewform?usp=sf_link" target="_blank">here</a>.</p>
+      <p><small>Note: Solving this challenge doesn't affect your last submission time.</small></p>
+    author: insecure
+    base_score: 1000
+    difficulty: 0
+  Welcome:
+    tags: [welcome]
+    flag: KosenCTF{g3t_r34dy_f0r_InterKosenCTF_2019}
+    description: 'Join in our <a href="https://join.slack.com/t/interkosenctf2019/shared_invite/enQtNzA5ODU0NzA1NTUzLWRmOGFmNmY1MGViODEyMTNmOGYxN2VlYzVkYWVkMmMzZDhhOTlkMGJkMTM4YmYzNTM4YzQzZTM2MDdlYjRmZTQ" target="_blank">slack</a> and get the flag!'
+    author: insecure
+    base_score: 1000
+    difficulty: 0

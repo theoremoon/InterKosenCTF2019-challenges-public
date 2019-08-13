@@ -1,0 +1,11 @@
+version: '3'
+services:
+  neko_loader:
+    image: php:7.3-apache
+    restart: always
+    ports:
+      - 10003:80
+    volumes:
+      - ./challenge/html:/var/www/html/
+      - ./challenge/php.ini:/usr/local/etc/php/php.ini
+      - ./challenge/flag:/nyannyan_flag
